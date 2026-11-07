@@ -382,6 +382,7 @@
     .support-logos {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: auto;
       padding-top: 1.25rem;
@@ -443,10 +444,27 @@
 
     @media (max-width: 768px) {
       h1 { font-size: 2.1rem; }
-      .nav-links { display: none; }
       .container { padding: 2.5rem 1.2rem; }
       .hero { padding: 4.5rem 1.2rem 3.5rem; }
       .support-logos img { height: 65px; } 
+      
+      /* New Mobile Header Layout */
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem;
+      }
+      
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+      }
+      
+      .nav-links a {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
